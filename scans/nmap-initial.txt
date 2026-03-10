@@ -1,4 +1,4 @@
-sudo nmap 10.129.202.5 -p111,2049 -sV -sC
+sudo nmap 10.129.202.5 -p111,2049 -sV -sC -T5
 
 Result:
 
