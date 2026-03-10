@@ -1,1 +1,36 @@
+sudo nmap 10.129.202.5 -p111,2049 -sV -sC
+
+Result:
+
+Nmap scan report for <TARGET-IP>
+Host is up (0.062s latency).
+
+PORT     STATE SERVICE VERSION
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/udp   nfs
+|   100003  3           2049/udp6  nfs
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      45179/tcp6  mountd
+|   100005  1,2,3      47593/udp   mountd
+|   100005  1,2,3      57391/udp6  mountd
+|   100005  1,2,3      58671/tcp   mountd
+|   100021  1,3,4      33156/udp6  nlockmgr
+|   100021  1,3,4      39689/tcp6  nlockmgr
+|   100021  1,3,4      45017/tcp   nlockmgr
+|   100021  1,3,4      45665/udp   nlockmgr
+|   100227  3           2049/tcp   nfs_acl
+|   100227  3           2049/tcp6  nfs_acl
+|   100227  3           2049/udp   nfs_acl
+|_  100227  3           2049/udp6  nfs_acl
+2049/tcp open  nfs     3-4 (RPC #100003)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 6.86 seconds
 
