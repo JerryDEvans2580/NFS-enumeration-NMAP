@@ -1,0 +1,31 @@
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-10 13:48 CDT
+Stats: 0:00:06 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Nmap scan report for <TARGET-IP>
+Host is up (0.040s latency).
+
+Bug in rpcinfo: no string output.
+PORT     STATE SERVICE VERSION
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| nfs-ls: Volume /var/nfs
+|   access: Read Lookup Modify Extend Delete NoExecute
+| PERMISSION  UID    GID    SIZE  TIME                 FILENAME
+| rwxr-xr-x   65534  65534  4096  2021-11-08T15:08:27  .
+| ??????????  ?      ?      ?     ?                    ..
+| rw-r--r--   65534  65534  39    2021-11-08T15:08:27  flag.txt
+| 
+| 
+| Volume /mnt/nfsshare
+|   access: Read Lookup Modify Extend Delete NoExecute
+| PERMISSION  UID    GID    SIZE  TIME                 FILENAME
+| rwxr-xr-x   65534  65534  4096  2021-11-08T14:06:40  .
+| ??????????  ?      ?      ?     ?                    ..
+| rw-r--r--   65534  65534  59    2021-11-08T14:06:40  flag.txt
+|_
+| nfs-showmount: 
+|   /var/nfs 10.0.0.0/8
+|_  /mnt/nfsshare 10.0.0.0/8
+2049/tcp open  nfs     3-4 (RPC #100003)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.17 seconds
